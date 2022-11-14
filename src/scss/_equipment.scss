@@ -2,22 +2,38 @@
     background-color: var(--bg-color-light);
     position: relative;
     z-index: 1;
+
+    background-image: url('../img/equipment-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include breakpoint(mobile) {
+        background-image: url('../img/equipment-bg-mobile.jpg');
+    }
+
+    .light-theme & {
+        background-image: url('../img/equipment-bg-light.jpg');
+        @include breakpoint(mobile) {
+            background-image: url('../img/equipment-light-bg-mobile.jpg');
+        }
+    }
 }
 
-.equipment__bg {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
+// .equipment__bg {
+//     position: absolute;
+//     inset: 0;
+//     z-index: -1;
+// }
 
-.equipment__bg-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+// .equipment__bg-image {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
 
 .equipment__content {
     padding: 6rem var(--side-padding);

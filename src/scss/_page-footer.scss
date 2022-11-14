@@ -37,6 +37,7 @@
 }
 
 .page-footer__logo {
+    position: relative;
     @include breakpointMF(small-tablet) {
         grid-column: 1 / 4;
         justify-self: flex-start;
@@ -51,6 +52,26 @@
     display: block;
     height: auto;
     width: 17.5rem;
+
+    transition: opacity 0.2s;
+    &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+
+    .light-theme & {
+        &:nth-child(1) {
+            opacity: 0;
+        }
+
+        &:nth-child(2) {
+            opacity: 1;
+        }
+    }
 
     @include breakpoint(mobile) {
         width: 10rem;
@@ -166,6 +187,24 @@
             }
         }
     }
+
+    .light-theme & {
+        & > ul > li {
+            & > a {
+                color: #004571;
+                &:link,
+                &:visited {
+                    color: #004571;
+                }
+            }
+
+            & > ul {
+                & > li > a {
+                    color: #68a4c6;
+                }
+            }
+        }
+    }
 }
 
 .page-footer__contacts {
@@ -194,6 +233,14 @@
     text-decoration-color: transparent;
     transition: all 0.2s;
 
+    .light-theme & {
+        color: #004571;
+        &:link,
+        &:visited {
+            color: #004571;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
@@ -216,7 +263,7 @@
 
     @media (hover: hover) {
         &:hover {
-            text-decoration-color: var(--text-color);
+            text-decoration-color: currentColor;
         }
     }
 }

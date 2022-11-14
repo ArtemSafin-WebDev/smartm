@@ -234,6 +234,10 @@
     font-size: 2rem;
     line-height: 2.4rem;
 
+    .light-theme & {
+        color: #154a76;
+    }
+
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;

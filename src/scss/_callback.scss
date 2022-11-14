@@ -1,6 +1,7 @@
 .callback {
     position: relative;
     z-index: 1;
+    color: white;
 }
 
 .callback__bg {
@@ -186,7 +187,7 @@
     line-height: 2.7rem;
     border-bottom: 1px solid rgba(white, 0.3);
     transition: border-color 0.2s;
-    color: var(--text-color);
+    color: white;
     @include placeholder {
         opacity: 0;
     }
@@ -213,7 +214,7 @@
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2rem;
-    color: var(--callback-label);
+    color: #a7bbc7;
     transition: transform 0.4s;
     transform-origin: left top;
     pointer-events: none;

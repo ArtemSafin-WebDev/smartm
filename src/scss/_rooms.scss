@@ -1,5 +1,9 @@
 .rooms {
     background: linear-gradient(180deg, rgba(30, 136, 202, 0.22) 0%, rgba(30, 136, 202, 0) 100%);
+
+    .light-theme & {
+        background: linear-gradient(180deg, rgba(30, 136, 202, 0.06) 0%, rgba(30, 136, 202, 0) 100%);
+    }
 }
 
 .rooms__content {
@@ -100,6 +104,12 @@
             height: 0.8rem;
         }
     }
+
+    .light-theme & {
+        svg {
+            fill: #84a6c2;
+        }
+    }
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -126,6 +136,10 @@
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     gap: 3.6rem;
+
+    .light-theme & {
+        color: #84a6c2;
+    }
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
@@ -169,12 +183,14 @@
     font-weight: 400;
     font-size: 2.7rem;
     line-height: 3.3rem;
+    max-width: 62rem;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
         font-size: 1.7rem;
         line-height: 1.8rem;
+        max-width: none;
     }
 }
 
@@ -243,6 +259,19 @@
         color: var(--text-color);
         border-color: var(--text-color);
         cursor: default;
+    }
+
+    .light-theme & {
+        color: #68a4c6;
+        &:link,
+        &:visited {
+            color: #68a4c6;
+        }
+
+        &.active {
+            color: #004571;
+            border-color: #004571;
+        }
     }
 }
 

@@ -10,9 +10,9 @@
     --max-container-width: 161.5rem;
     --inner-container-width: 154rem;
     --content-padding: 3.2rem;
+    --formular: 'Formular', sans-serif;
     --primary-color: #44b7ff;
     --text-color: white;
-    --formular: 'Formular', sans-serif;
     --bg-color: #2e4260;
     --bg-color-light: #364f73;
     --side-padding: 4.8rem;
@@ -31,6 +31,24 @@
         --content-padding: 1.5rem;
         --side-padding: 1rem;
     }
+}
+
+.light-theme {
+    --primary-color: #44b7ff;
+    --text-color: #1c2128;
+    --bg-color: #eef6fe;
+    --bg-color-light: #364f73;
+
+    --grey-text: #68a4c6;
+    --policy-color: #83959f;
+    --arrows-inactive: #68a4c6;
+    --callback-form-border: rgba(white, 0.3);
+    --decorative-border-color: #c1daee;
+    --decorative-border-color-light: #476a7e;
+    --callback-label: #68a4c6;
+    --stages-card-border: #68a4c6;
+    --advantages-border: #68a4c6;
+    --mobile-controls: #68a4c6;
 }
 
 html {
