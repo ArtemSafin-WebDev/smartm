@@ -1,0 +1,315 @@
+.page-footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.page-footer__content {
+    padding: 0 var(--side-padding);
+}
+.page-footer__top-row {
+    margin-bottom: 7rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+        align-items: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.page-footer__bottom-row {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+        align-items: flex-end;
+    }
+}
+
+.page-footer__logo {
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 4;
+        justify-self: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.page-footer__logo-image {
+    display: block;
+    height: auto;
+    width: 17.5rem;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+    }
+}
+
+.page-footer__nav {
+    @include breakpointMF(small-tablet) {
+        grid-column: 4 / 9;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        margin-bottom: 4.5rem;
+    }
+}
+
+.page-footer__nav-col {
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        &:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        &:nth-child(2) {
+            grid-column: span 3;
+            padding-left: 2.4rem;
+        }
+    }
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+        flex-grow: 1;
+
+        @include breakpoint(mobile) {
+            gap: 2rem;
+        }
+        & > li {
+            & > a {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                display: block;
+                letter-spacing: 0.05rem;
+                text-transform: uppercase;
+
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                transition: all 0.2s;
+
+                @include breakpoint(mobile) {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    line-height: 1.5rem;
+                    letter-spacing: 0.05rem;
+                    text-transform: uppercase;
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        text-decoration-color: var(--text-color);
+                    }
+                }
+            }
+
+            & > ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                margin-top: 0.8rem;
+
+                @include breakpoint(mobile) {
+                    gap: 0.9rem;
+                    margin-top: 1.2rem;
+                }
+
+                & > li {
+                    & > a {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
+                        display: block;
+                        color: var(--grey-text);
+                        &:link,
+                        &:visited {
+                            color: var(--grey-text);
+                        }
+
+                        @include breakpoint(mobile) {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.2rem;
+                            line-height: 1.5rem;
+                        }
+
+                        @media (hover: hover) {
+                            &:hover {
+                                color: var(--text-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    @include breakpointMF(small-tablet) {
+        grid-column: 9 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        gap: 2.4rem;
+    }
+}
+
+.page-footer__contacts-link {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.7rem;
+    line-height: 2.8rem;
+    gap: 2rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+        gap: 0.8rem;
+    }
+    svg {
+        flex-shrink: 0;
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 0.25rem;
+
+        @include breakpoint(mobile) {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            text-decoration-color: var(--text-color);
+        }
+    }
+}
+
+.page-footer__copyright {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--grey-text);
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 4;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.page-footer__policy {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--grey-text);
+
+    &:link,
+    &:visited {
+        color: var(--grey-text);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 4 / 9;
+        justify-self: flex-start;
+    }
+}
+
+.page-footer__made-by {
+    display: flex;
+    align-items: flex-end;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    gap: 1.1rem;
+    color: var(--grey-text);
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 9 / -1;
+        justify-self: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-top: 2.6rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--grey-text);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 13.15rem;
+        height: 1.32rem;
+        fill: currentColor;
+        margin-bottom: 0.13rem;
+    }
+}

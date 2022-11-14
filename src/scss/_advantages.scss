@@ -1,0 +1,284 @@
+.advantages {
+}
+
+.advantages__content {
+    padding: 3rem var(--side-padding);
+    position: relative;
+
+    @include breakpointMF(small-tablet) {
+        &::before {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            bottom: 0;
+            top: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            bottom: 0;
+            top: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem var(--side-padding);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+            top: 0;
+            bottom: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+            top: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.advantages__right-corner {
+    right: 0;
+    top: 0;
+    position: absolute;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: var(--decorative-border-color);
+        height: 0.6rem;
+        width: 1px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        transform: translateX(-50%);
+    }
+}
+
+.advantages__right-bar {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    left: 100%;
+    margin-left: 1.3rem;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.advantages__left-cross {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+    &::before {
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        position: absolute;
+    }
+    &::after {
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        position: absolute;
+    }
+}
+
+.advantages__left-middle-bar {
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 1.3rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        pointer-events: none;
+        transform: translateY(-50%);
+        width: calc(46.7% - 1.3rem);
+    }
+    @include breakpoint(mobile) {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 100vw;
+            top: 0;
+            height: 1px;
+            background-color: var(--decorative-border-color);
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.advantages__right-middle-bar {
+    position: absolute;
+    right: 1.3rem;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    top: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    width: calc(51.6% - 1.3rem);
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.advantages__left-bar {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    margin-right: 1.3rem;
+    width: 100vw;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+.advantages__list {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+}
+
+.advantages__card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+        gap: 1.4rem;
+    }
+}
+
+.advantages__card-icon-container {
+    flex-shrink: 0;
+    border: 1px solid var(--advantages-border);
+    position: relative;
+    width: 4.8rem;
+    height: 4.8rem;
+
+    @include breakpoint(mobile) {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+}
+
+.advantages__card-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.advantages__card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+}
+
+.advantages__scroll-indicator {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 1rem;
+    height: 4.8rem;
+    border: 1px solid var(--decorative-border-color);
+    margin-top: 3rem;
+    margin-right: 3rem;
+
+    &::after {
+        content: '';
+        width: 1px;
+        left: 50%;
+        top: 0.3rem;
+        bottom: 0.3rem;
+        background-color: var(--decorative-border-color);
+        transform: translateX(-50%);
+        position: absolute;
+        animation-name: scrollIndicator;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: center top;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes scrollIndicator {
+    0% {
+        transform: translateX(-50%) scaleY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    100% {
+        transform: translateX(-50%) scaleY(0);
+    }
+}

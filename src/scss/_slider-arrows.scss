@@ -1,0 +1,37 @@
+.slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.slider-arrows__btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7.6rem;
+    height: 7.6rem;
+    border: 1px solid white;
+    transition: border 0.2s;
+
+    &.swiper-button-disabled {
+        cursor: default;
+        border-color: var(--arrows-inactive);
+        svg {
+            fill: var(--arrows-inactive);
+        }
+    }
+
+    &:not(.swiper-button-disabled) {
+        @media (hover: hover) {
+            &:hover {
+            }
+        }
+    }
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x="7" y="6" width="41" height="42"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="13.22" y1="7.23" x2="46.22" y2="47.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#44b7ff"/>
+      <stop offset="1" stop-color="#4ebaff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-3">
+    <path class="cls-2" d="M62.06,40.77v-10.98h-7.34l-1.84-3.66,5.51-5.49-7.34-7.32-5.51,5.49-3.67-1.83v-7.32h-11.01v7.32l-3.67,1.83-5.51-5.49-7.34,7.32,5.51,5.49-1.84,3.66h-7.34v10.98h7.34l1.84,3.66-5.51,5.49,7.34,7.32,5.51-5.49,3.67,1.83v7.32h11.01v-7.32l3.67-1.83,5.51,5.49,7.34-7.32-5.51-5.49,1.84-3.66h7.34Zm-25.7,1.84c-4.05,0-7.34-3.28-7.34-7.32s3.29-7.32,7.34-7.32,7.34,3.28,7.34,7.32-3.29,7.32-7.34,7.32Z"/>
+  </g>
+</svg>
