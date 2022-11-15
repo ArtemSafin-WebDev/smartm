@@ -20,6 +20,7 @@ export default function intro() {
             loop: true,
             loopedSlides: 8,
             loopAdditionalSlides: 8,
+            longSwipesRatio: 0.25,
             creativeEffect: {
                 prev: {
                     translate: [0, 0, -400],
