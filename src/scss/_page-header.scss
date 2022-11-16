@@ -27,8 +27,28 @@
             transition: opacity 0.4s;
         }
 
+        &::after {
+            content: '';
+            height: auto;
+            background-color: var(--bg-color);
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            top: 0;
+            position: absolute;
+            z-index: 90;
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 60;
+        }
+
         .mobile-menu-open & {
             &::before {
+                opacity: 1;
+            }
+
+            &::after {
                 opacity: 1;
             }
         }

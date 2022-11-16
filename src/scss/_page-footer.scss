@@ -45,6 +45,7 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
+        align-self: flex-start;
     }
 }
 
