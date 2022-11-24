@@ -37,7 +37,7 @@
         background-color: var(--decorative-border-color);
         top: 0;
         pointer-events: none;
-        transform: translateY(-50%);
+
         width: calc(46.7% - 1.3rem);
         &::after {
             content: '';
@@ -193,7 +193,7 @@
     position: absolute;
     pointer-events: none;
     left: 0;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%);
     top: 0;
     height: 1px;
 
