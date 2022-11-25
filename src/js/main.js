@@ -14,7 +14,7 @@ import fileUpload from './fileUpload';
 import objectsSlider from './objectsSlider';
 import stagesSlider from './stagesSlider';
 import intro from './intro';
-import theme from './theme';
+import pageTransitions from './pageTransitions';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     objectsSlider();
     stagesSlider();
     intro();
-    theme();
+    pageTransitions();
 });
 
 document.addEventListener('lazyloaded', () => {

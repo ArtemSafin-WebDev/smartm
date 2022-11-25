@@ -1,39 +1,95 @@
 export default function fileUpload() {
-    const elements = Array.from(document.querySelectorAll('.js-file-upload'));
+    let instances = [];
 
-    elements.forEach(element => {
-        const input = element.querySelector('input[type="file"]');
-        const label = element.querySelector('.js-file-upload-text');
-        const form = element.closest('form');
+    function initializeFileUploads() {
+        const elements = Array.from(document.querySelectorAll('.js-file-upload'));
 
-        const originalLabelText = label.textContent;
+        elements.forEach(element => {
+            const input = element.querySelector('input[type="file"]');
+            const label = element.querySelector('.js-file-upload-text');
+            const form = element.closest('form');
 
-        input.addEventListener('change', () => {
-            if (input.files.length) {
-                label.textContent = input.files[0].name;
-            }
-        });
+            const originalLabelText = label.textContent;
 
-        input.addEventListener('dragenter', () => {
-            element.classList.add('dragged');
-        });
-        input.addEventListener('dragend', () => {
-            element.classList.remove('dragged');
-        });
-        input.addEventListener('dragleave', () => {
-            element.classList.remove('dragged');
-        });
-        input.addEventListener('drop', () => {
-            element.classList.remove('dragged');
-        });
+            const changeHandler = () => {
+                if (input.files.length) {
+                    label.textContent = input.files[0].name;
+                }
+            };
 
-        if (form) {
-            form.addEventListener('reset', () => {
+            const dragEnterHandler = () => {
+                element.classList.add('dragged');
+            };
+
+            const dragEndHandler = () => {
+                element.classList.remove('dragged');
+            };
+
+            const dragLeaveHandler = () => {
+                element.classList.remove('dragged');
+            };
+
+            const dropHandler = () => {
+                element.classList.remove('dragged');
+            };
+
+            input.addEventListener('change', changeHandler);
+            input.addEventListener('dragenter', dragEnterHandler);
+            input.addEventListener('dragend', dragEndHandler);
+            input.addEventListener('dragleave', dragLeaveHandler);
+            input.addEventListener('drop', dropHandler);
+
+            const formResetHandler = () => {
                 input.value = '';
                 label.innerHTML = originalLabelText;
                 element.classList.remove('file-loaded');
                 element.classList.remove('dragged');
-            });
-        }
+            };
+
+            if (form) {
+                form.addEventListener('reset', formResetHandler);
+            }
+
+            const instance = {
+                input,
+                changeHandler,
+                dragEnterHandler,
+                dragEndHandler,
+                dragLeaveHandler,
+                dropHandler,
+                form: form ? form : null,
+                formResetHandler
+            };
+
+            instances.push(instance);
+        });
+    }
+
+    function destroyFileUploads() {
+        instances.forEach(instance => {
+            const { input, changeHandler, dragEnterHandler, dragEndHandler, dragLeaveHandler, dropHandler, form, formResetHandler } = instance;
+
+            input.removeEventListener('change', changeHandler);
+            input.removeEventListener('dragenter', dragEnterHandler);
+            input.removeEventListener('dragend', dragEndHandler);
+            input.removeEventListener('dragleave', dragLeaveHandler);
+            input.removeEventListener('drop', dropHandler);
+
+            if (form) {
+                form.removeEventListener('reset', formResetHandler);
+            }
+        });
+
+        instances = [];
+    }
+
+    initializeFileUploads();
+
+    document.addEventListener('swup:willReplaceContent', event => {
+        destroyFileUploads();
+    });
+
+    document.addEventListener('swup:contentReplaced', event => {
+        initializeFileUploads();
     });
 }
