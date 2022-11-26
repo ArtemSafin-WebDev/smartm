@@ -75,6 +75,8 @@
         padding-top: 5rem;
         padding-bottom: 5rem;
         min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
+        min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
+        // padding-bottom: calc(5rem + (100vh - var(--vh, 1vh) * 100));
         &::before {
             content: '';
             position: absolute;

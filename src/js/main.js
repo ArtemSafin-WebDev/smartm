@@ -15,7 +15,6 @@ import pageTransitions from './pageTransitions';
 import phoneMasks from './phoneMasks';
 import validation from './validation';
 import maps from './maps';
-import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     pageTransitions();
     validation();
     maps();
-    clientHeight();
 });
 
 document.addEventListener('lazyloaded', () => {
