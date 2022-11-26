@@ -70,7 +70,7 @@ export const objectOut = data => {
             data.current.container,
             {
                 autoAlpha: 0,
-                duration: 0.4
+                duration: 1
             },
             0
         )
