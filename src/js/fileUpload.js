@@ -1,8 +1,10 @@
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
+
 export default function fileUpload() {
     let instances = [];
 
-    function initializeFileUploads() {
-        const elements = Array.from(document.querySelectorAll('.js-file-upload'));
+    function initializeFileUploads(context = document) {
+        const elements = Array.from(context.querySelectorAll('.js-file-upload'));
 
         elements.forEach(element => {
             const input = element.querySelector('input[type="file"]');
@@ -85,11 +87,11 @@ export default function fileUpload() {
 
     initializeFileUploads();
 
-    document.addEventListener('swup:willReplaceContent', event => {
+    document.addEventListener(PAGE_LEAVE, event => {
         destroyFileUploads();
     });
 
-    document.addEventListener('swup:contentReplaced', event => {
-        initializeFileUploads();
+    document.addEventListener(PAGE_ENTER, event => {
+        initializeFileUploads(event.detail.container);
     });
 }

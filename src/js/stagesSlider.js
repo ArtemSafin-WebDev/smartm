@@ -1,4 +1,5 @@
 import { Swiper, Navigation, EffectCreative } from 'swiper';
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 import { IS_MOBILE } from './utils';
 
 Swiper.use([Navigation, EffectCreative]);
@@ -6,8 +7,8 @@ Swiper.use([Navigation, EffectCreative]);
 export default function stagesSlider() {
     let instances = [];
 
-    function initializeSliders() {
-        const elements = Array.from(document.querySelectorAll('.js-stages-slider'));
+    function initializeSliders(context = document) {
+        const elements = Array.from(context.querySelectorAll('.js-stages-slider'));
 
         elements.forEach(element => {
             const container = element.querySelector('.swiper');
@@ -43,11 +44,11 @@ export default function stagesSlider() {
 
     initializeSliders();
 
-    document.addEventListener('swup:willReplaceContent', event => {
+    document.addEventListener(PAGE_LEAVE, event => {
         destroySliders();
     });
 
-    document.addEventListener('swup:contentReplaced', event => {
-        initializeSliders();
+    document.addEventListener(PAGE_ENTER, event => {
+        initializeSliders(event.detail.container);
     });
 }

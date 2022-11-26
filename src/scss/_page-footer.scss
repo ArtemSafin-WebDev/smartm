@@ -294,7 +294,7 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: var(--grey-text);
-
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: var(--grey-text);
@@ -329,6 +329,7 @@
     line-height: 1.5rem;
     gap: 1.1rem;
     color: var(--grey-text);
+    transition: color 0.2s;
 
     @include breakpointMF(small-tablet) {
         grid-column: 9 / -1;

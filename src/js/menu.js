@@ -1,37 +1,75 @@
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 
 export default function menu() {
-    const burger = document.querySelector('.page-header__burger');
-    const menu = document.querySelector('.page-header__menu');
+    let instances = [];
+    function initializeMenu(context = document) {
+        const burger = context.querySelector('.page-header__burger');
+        const menu = context.querySelector('.page-header__menu');
+        const nav = context.querySelector('.page-header__nav');
 
-    window.menuOpen = false;
+        let menuOpen = false;
 
-    if (!burger || !menu) return;
+        if (!burger || !menu) return;
 
-    const openMenu = () => {
-        if (window.menuOpen) return;
-        document.body.classList.add('mobile-menu-open');
-        disableBodyScroll(menu, {
-            reserveScrollBarGap: true
-        });
-        window.menuOpen = true;
-    };
-    const closeMenu = () => {
-        if (!window.menuOpen) return;
-        document.body.classList.remove('mobile-menu-open');
-        clearAllBodyScrollLocks();
-        window.menuOpen = false;
-    };
+        const openMenu = () => {
+            if (menuOpen) return;
+            document.body.classList.add('mobile-menu-open');
+            disableBodyScroll(menu, {
+                reserveScrollBarGap: true
+            });
+            menuOpen = true;
+        };
+        const closeMenu = () => {
+            if (!menuOpen) return;
+            document.body.classList.remove('mobile-menu-open');
+            clearAllBodyScrollLocks();
+            menuOpen = false;
+        };
 
-    window.openMenu = openMenu;
-    window.closeMenu = closeMenu;
+        const burgerClickHandler = event => {
+            console.log('Burger clicked');
+            event.preventDefault();
+            if (!menuOpen) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        };
 
-    burger.addEventListener('click', event => {
-        event.preventDefault();
-        if (!window.menuOpen) {
-            openMenu();
-        } else {
+        const navClickHandler = event => {
             closeMenu();
-        }
+        };
+
+        burger.addEventListener('click', burgerClickHandler);
+        nav?.addEventListener('click', navClickHandler);
+
+        instances.push({
+            nav,
+            burger,
+            navClickHandler,
+            burgerClickHandler
+        });
+    }
+
+    function destroyMenu() {
+        clearAllBodyScrollLocks();
+
+        instances.forEach((nav, burger, burgerClickHandler, navClickHandler) => {
+            burger.removeEventListener('click', burgerClickHandler);
+            nav?.removeEventListener('click', navClickHandler);
+        });
+
+        instances = [];
+    }
+
+    initializeMenu();
+
+    document.addEventListener(PAGE_LEAVE, event => {
+        destroyMenu();
+    });
+
+    document.addEventListener(PAGE_ENTER, event => {
+        initializeMenu(event.detail.container);
     });
 }

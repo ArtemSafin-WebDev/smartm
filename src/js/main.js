@@ -1,10 +1,7 @@
 import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
-import masks from './masks';
-import validation from './validation';
-import anchorLinks from './anchorLinks';
-import accordions from './accordions';
+
 import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
@@ -15,16 +12,20 @@ import objectsSlider from './objectsSlider';
 import stagesSlider from './stagesSlider';
 import intro from './intro';
 import pageTransitions from './pageTransitions';
+import phoneMasks from './phoneMasks';
+import validation from './validation';
+import maps from './maps';
+import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
     detectTouch();
     setScrollbarWidth();
-    masks();
-    validation();
-    anchorLinks();
-    accordions();
+    phoneMasks();
     modals();
     tabs();
     menu();
@@ -33,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     stagesSlider();
     intro();
     pageTransitions();
+    validation();
+    maps();
+    clientHeight();
 });
 
 document.addEventListener('lazyloaded', () => {

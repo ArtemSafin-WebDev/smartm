@@ -17,7 +17,9 @@
     "not dead"
   ],
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@fancyapps/ui": "^4.0.26",
+    "@swup/js-plugin": "^1.0.5",
     "body-scroll-lock": "^3.1.5",
     "bootstrap-datepicker": "^1.9.0",
     "choices.js": "^10.1.0",

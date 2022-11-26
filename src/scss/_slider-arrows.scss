@@ -11,43 +11,49 @@
     justify-content: center;
     width: 7.6rem;
     height: 7.6rem;
-    border: 1px solid white;
-    transition: border 0.2s;
+    border: 1px solid #68a4c6;
+    transition: border 0.2s, opacity 0.2s;
 
     svg {
         width: 2.4rem;
         height: 2.4rem;
-        fill: white;
+        fill: #68a4c6;
         transition: fill 0.2s;
-    }
-
-    &.swiper-button-disabled {
-        cursor: default;
-        border-color: var(--arrows-inactive);
-        svg {
-            fill: var(--arrows-inactive);
-        }
-    }
-
-    .light-theme & {
-        border-color: #004571;
-
-        svg {
-            fill: #004571;
-        }
-
-        &.swiper-button-disabled {
-            border-color: #68a4c6;
-
-            svg {
-                fill: #68a4c6;
-            }
-        }
     }
 
     &:not(.swiper-button-disabled) {
         @media (hover: hover) {
             &:hover {
+                border-color: white;
+
+                svg {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.7;
+    }
+
+    .light-theme & {
+        border-color: #68a4c6;
+
+        svg {
+            fill: #68a4c6;
+        }
+
+        &:not(.swiper-button-disabled) {
+            @media (hover: hover) {
+                &:hover {
+                    border-color: #004571;
+
+                    svg {
+                        fill: #004571;
+                    }
+                }
             }
         }
     }

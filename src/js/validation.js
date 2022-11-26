@@ -1,6 +1,7 @@
 import 'parsleyjs';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 
 dayjs.extend(customParseFormat);
 
@@ -79,8 +80,8 @@ Parsley.setLocale('ru');
 
 export default function validation() {
     let instances = [];
-    function initializeValidation() {
-        const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
+    function initializeValidation(context = document) {
+        const formsToValidate = Array.from(context.querySelectorAll('form[data-need-validation]'));
 
         formsToValidate.forEach(form => {
             const instance = $(form).parsley();
@@ -97,11 +98,11 @@ export default function validation() {
 
     initializeValidation();
 
-    document.addEventListener('swup:willReplaceContent', event => {
+    document.addEventListener(PAGE_LEAVE, event => {
         destroyValidation();
     });
 
-    document.addEventListener('swup:contentReplaced', event => {
-        initializeValidation();
+    document.addEventListener(PAGE_ENTER, event => {
+        initializeValidation(event.detail.container);
     });
 }

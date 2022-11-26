@@ -1,0 +1,196 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+        <section class="contacts">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="contacts__content">
+                        <div class="contacts__top-left-corner"></div>
+                        <div class="contacts__top-right-corner"></div>
+                        <div class="contacts__top-right-bar"></div>
+                        <div class="contacts__top-left-bar"></div>
+                        <div class="contacts__row">
+                            <div class="contacts__col">
+                                <h1 class="contacts__heading">
+                                    Контактная информация
+                                </h1>
+                                <div class="contacts__text">
+                                    <p>
+                                        Мы открыты к сотрудничеству, и готовы к новым форматам проектов.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contacts__col">
+                                <ul class="contacts__list">
+                                    <li class="contacts__list-item">
+                                        <div class="contacts__card">
+                                            <h2 class="contacts__card-title">
+                                                Почта
+                                            </h2>
+                                            <a href="mailto:smartm@gmail.com"
+                                                class="contacts__link">smartm@gmail.com</a>
+                                        </div>
+                                    </li>
+                                    <li class="contacts__list-item">
+                                        <div class="contacts__card">
+                                            <h2 class="contacts__card-title">
+                                                телефон
+                                            </h2>
+                                            <a href="tel:89876543210" class="contacts__link">8 987 654 32 10</a>
+                                        </div>
+                                    </li>
+                                    <li class="contacts__list-item">
+                                        <div class="contacts__card">
+                                            <h2 class="contacts__card-title">
+                                                По вопросам сотрудничества
+                                            </h2>
+                                            <a href="tel:89876543210" class="contacts__link">8 987 654 32 10</a>
+                                            <a href="mailto:smartm@gmail.com"
+                                                class="contacts__link">smartm@gmail.com</a>
+                                        </div>
+                                    </li>
+                                    <li class="contacts__list-item">
+                                        <div class="contacts__card">
+                                            <h2 class="contacts__card-title">
+                                                Отдел по рекламе
+                                            </h2>
+                                            <a href="tel:89876543210" class="contacts__link">8 987 654 32 10</a>
+                                            <a href="mailto:smartm@gmail.com"
+                                                class="contacts__link">smartm@gmail.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contacts__map">
+                            <div class="contacts__map-element js-map" data-center="55.778779, 37.706658" data-zoom="16"
+                                data-coords="55.778340, 37.699642">
+                                <div class="contacts__map-element-inner js-map-element">
+
+                                </div>
+                            </div>
+                            <div class="contacts__address">
+                                <h3 class="contacts__address-title">
+                                    Адрес
+                                </h3>
+                                <div class="contacts__address-text">
+                                    105082, Россия, Москва, ул. Большая Почтовая, д. 26в стр. 2, эт/пом/ком 2/I/17
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="callback__bg">
+                <img data-src="img/callback-bg.jpg" alt="" class="callback__bg-image lazyload">
+            </div>
+            <div class="container">
+                <div class="inner-container">
+                    <div class="callback__row">
+                        <div class="callback__left-col">
+                            <h2 class="callback__heading">
+                                Создадим для вас уникальный медицинский комплекс
+                            </h2>
+                            <div class="callback__text">
+                                <p>
+                                    Обсудим детали вашего проекта и ответим на все вопросы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="callback__right-col">
+                            <form action="/" method="POST" class="callback__form" data-need-validation="">
+                                <div class="callback__form-fields">
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="text" name="name" class="callback__form-input" required=""
+                                                placeholder="Имя">
+                                            <span class="callback__form-label-text">
+                                                Имя
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="tel" name="phone" class="callback__form-input js-phone-input"
+                                                required="" placeholder="Телефон" data-parsley-phone="">
+                                            <span class="callback__form-label-text">
+                                                Телефон
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="email" name="email" class="callback__form-input" required=""
+                                                placeholder="Почта">
+                                            <span class="callback__form-label-text">
+                                                Почта
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="text" name="comment" class="callback__form-input" required=""
+                                                placeholder="Комментарий">
+                                            <span class="callback__form-label-text">
+                                                Комментарий
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-file js-file-upload">
+                                            <input type="file" class="callback__form-file-input">
+                                            <span class="callback__form-file-text js-file-upload-text">
+                                                Прикрепить файл
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-file">
+                                                <use xlink:href="#file"></use>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="callback__form-submit" type="submit">
+                                    Отправить
+                                </button>
+                                <div class="callback__form-text">
+                                    Нажимая на кнопку, вы даете <a href="#">согласие</a> на обработку персональных
+                                    данных
+                                    и соглашаетесь
+                                    с политикой конфиденциальности.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="callback__success">
+                <div class="callback__success-bg">
+                    <img data-src="img/callback-bg.jpg" alt="" class="callback__success-bg-image lazyload">
+                </div>
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="callback__success-row">
+                            <h3 class="callback__success-heading">
+                                Ваша заявка<br> успешно<br> отправлена
+                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                    <use xlink:href="#checkmark"></use>
+                                </svg>
+                            </h3>
+                            <div class="callback__success-text">
+                                <p>
+                                    Спасибо за обращение! Мы уже обрабатываем ваше обращение, наш менеджер свяжется с
+                                    вами в течении дня
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

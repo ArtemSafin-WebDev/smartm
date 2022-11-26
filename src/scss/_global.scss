@@ -10,6 +10,7 @@
     --max-container-width: 161.5rem;
     --inner-container-width: 154rem;
     --content-padding: 3.2rem;
+    --header-height: 8.8rem;
     --formular: 'Formular', sans-serif;
     --primary-color: #44b7ff;
     --text-color: white;
@@ -21,7 +22,6 @@
     --arrows-inactive: #68a4c6;
     --callback-form-border: rgba(white, 0.3);
     --decorative-border-color: #476a7e;
-    --decorative-border-color-light: #476a7e;
     --callback-label: #a7bbc7;
     --stages-card-border: #68a4c6;
     --advantages-border: #1e88ca;
@@ -30,6 +30,7 @@
     @include breakpoint(mobile) {
         --content-padding: 1.5rem;
         --side-padding: 1rem;
+        --header-height: 5rem;
     }
 }
 
@@ -44,7 +45,7 @@
     --arrows-inactive: #68a4c6;
     --callback-form-border: rgba(white, 0.3);
     --decorative-border-color: #c1daee;
-    --decorative-border-color-light: #476a7e;
+
     --callback-label: #68a4c6;
     --stages-card-border: #68a4c6;
     --advantages-border: #68a4c6;
@@ -164,13 +165,12 @@ button {
     outline: none;
     display: inline-flex;
     position: relative;
-    transition: color 0.2s;
 }
 
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: color 0.2s;
+
     &:link,
     &:visited {
         color: inherit;
@@ -187,7 +187,6 @@ a:where(:not[class]) {
 svg {
     flex-shrink: 0;
     fill: currentColor;
-    transition: fill 0.2s;
 }
 
 img {

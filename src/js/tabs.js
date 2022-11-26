@@ -1,14 +1,15 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 export default function tabs() {
     let instances = [];
 
-    function initializeTabs() {
-        const elements = Array.from(document.querySelectorAll('.js-tabs'));
+    function initializeTabs(context = document) {
+        const elements = Array.from(context.querySelectorAll('.js-tabs'));
 
         elements.forEach(element => {
             const btns = Array.from(element.querySelectorAll('.js-tabs-btn'));
@@ -65,11 +66,11 @@ export default function tabs() {
 
     initializeTabs();
 
-    document.addEventListener('swup:willReplaceContent', event => {
+    document.addEventListener(PAGE_LEAVE, event => {
         destroyTabs();
     });
 
-    document.addEventListener('swup:contentReplaced', event => {
-        initializeTabs();
+    document.addEventListener(PAGE_ENTER, event => {
+        initializeTabs(event.detail.container);
     });
 }
