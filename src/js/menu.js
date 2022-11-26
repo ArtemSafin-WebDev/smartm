@@ -55,7 +55,7 @@ export default function menu() {
     function destroyMenu() {
         clearAllBodyScrollLocks();
 
-        instances.forEach((nav, burger, burgerClickHandler, navClickHandler) => {
+        instances.forEach(({ nav, burger, burgerClickHandler, navClickHandler }) => {
             burger.removeEventListener('click', burgerClickHandler);
             nav?.removeEventListener('click', navClickHandler);
         });

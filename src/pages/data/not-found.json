@@ -1,5 +1,6 @@
 {
     "title": "Страница не найдена",
     "whiteHeader": true,
-    "noFooter": true
+    "noFooter": true,
+    "namespace": "home"
 }

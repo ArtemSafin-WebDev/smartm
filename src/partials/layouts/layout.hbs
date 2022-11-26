@@ -29,9 +29,7 @@
         </div>
 
         <div class="page-content" data-barba="wrapper">
-            <div class="page-wrapper" data-barba="container" data-barba-namespace="home">
-
-
+            <div class="page-wrapper" data-barba="container" data-barba-namespace="{{namespace}}">
                 {{> header }}
                 <main class="page-main">
                     {{#block "main"}}
@@ -42,6 +40,7 @@
                 {{> footer }}
                 {{> ie-placeholder }}
             </div>
+            <div class="portfolio__size-reference" data-flip-id="1"></div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=6666783f-60d2-4799-a64b-58ea2441fa51
