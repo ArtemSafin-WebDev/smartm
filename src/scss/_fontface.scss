@@ -16,6 +16,14 @@
 
 @font-face {
     font-family: 'Formular';
+    src: url('../assets/fonts/Formular-MediumItalic.woff2') format('woff2'), url('../assets/fonts/Formular-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
     src: url('../assets/fonts/Formular.woff2') format('woff2'), url('../assets/fonts/Formular.woff') format('woff');
     font-weight: normal;
     font-style: normal;

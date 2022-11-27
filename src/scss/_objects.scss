@@ -1,5 +1,4 @@
 .objects {
-    margin-top: var(--header-height);
 }
 
 .objects__content {
@@ -173,6 +172,11 @@
             }
         }
     }
+}
+
+.objects__slider-card-animation-wrapper {
+    position: absolute;
+    inset: 0;
 }
 
 .objects__slider-card-image-container {

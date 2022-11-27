@@ -1,0 +1,326 @@
+.object-about {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: url('../img/object-about-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .light-theme & {
+        background-image: url('../img/object-about-bg-light.jpg');
+    }
+}
+
+.object-about__content {
+}
+
+.object-about__top-row {
+    padding: 8.5rem var(--side-padding, 0);
+    position: relative;
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+        align-items: flex-start;
+        &::before {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0rem;
+            bottom: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            top: 0rem;
+            bottom: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0rem;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            top: 0rem;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+}
+
+.object-about__heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    .light-theme & {
+        color: #68a4c6;
+    }
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+}
+
+.object-about__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.7rem;
+    line-height: 3.3rem;
+    @include breakpointMF(small-tablet) {
+        grid-column: 3 / 12;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+    }
+}
+
+.object-about__bottom-row {
+    padding: 0 var(--side-padding);
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+        align-items: flex-start;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            bottom: 0rem;
+            top: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            bottom: 0rem;
+            top: 1.3rem;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 2.4rem;
+        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            bottom: 0rem;
+            top: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            bottom: 0rem;
+            top: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+}
+
+.object-about__icon {
+    width: 4.7rem;
+    height: auto;
+    justify-self: flex-start;
+    opacity: 0.6;
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        width: 4.2rem;
+    }
+}
+
+.object-about__second-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 6.2rem;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 3 / 12;
+        margin-top: -1rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 2.7rem;
+    }
+}
+
+.object-about__top-left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
+        left: 50%;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.object-about__top-right-corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
+        left: 50%;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.object-about__top-middle-bar {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    left: 1.3rem;
+    right: 1.3rem;
+
+    @include breakpoint(mobile) {
+        left: 0;
+        right: 0;
+    }
+}
+
+.object-about__top-left-bar {
+    position: absolute;
+    right: 100%;
+    margin-right: 1.3rem;
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+    }
+}
+.object-about__top-right-bar {
+    position: absolute;
+    left: 100%;
+    margin-left: 1.3rem;
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}

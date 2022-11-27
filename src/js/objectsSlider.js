@@ -23,6 +23,7 @@ export default function objectsSlider() {
                 loop: true,
                 loopedSlides: 8,
                 loopAdditionalSlides: 8,
+                threshold: 2,
                 creativeEffect: {
                     prev: {
                         translate: [0, 0, -400],

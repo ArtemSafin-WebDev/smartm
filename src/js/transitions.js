@@ -33,17 +33,22 @@ export const objectIn = data => {
         autoAlpha: 0,
         duration: 0.5,
         delay: 2
+        // onComplete: () => {
+        //     gsap.set(data.next.container, {
+        //         clearProps: 'all'
+        //     });
+        // }
     });
 };
 
 export const objectOut = data => {
     gsap.set(data.current.container, {
-        position: 'relative'
+        position: 'absolute'
     });
 
     const trigger = data.trigger;
-    const sourceImageWrapper = trigger.querySelector('.portfolio__card-animation-wrapper');
-    const sizeReference = document.querySelector('.portfolio__size-reference');
+    const sourceImageWrapper = trigger.querySelector('.js-object-animation-wrapper');
+    const sizeReference = document.querySelector('.size-reference');
     const state = Flip.getState(sourceImageWrapper);
 
     gsap.set(sizeReference, {

@@ -307,21 +307,6 @@
     height: 100%;
 }
 
-.portfolio__size-reference {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 300;
-    opacity: 0;
-    visibility: hidden;
-
-    @include breakpoint(mobile) {
-        height: calc(var(--vh, 1vh) * 100);
-    }
-}
-
 .portfolio__card-image {
     position: absolute;
     left: 0;

@@ -15,6 +15,9 @@ import pageTransitions from './pageTransitions';
 import phoneMasks from './phoneMasks';
 import validation from './validation';
 import maps from './maps';
+import modalGallery from './modalGallery';
+import gallery from './gallery';
+import presentationCards from './presentationCards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     pageTransitions();
     validation();
     maps();
+    modalGallery();
+    modals();
+    gallery();
+    presentationCards();
 });
 
 document.addEventListener('lazyloaded', () => {

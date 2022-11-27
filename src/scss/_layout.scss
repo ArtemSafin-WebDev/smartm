@@ -47,3 +47,24 @@
     margin: 0 auto;
     max-width: var(--inner-container-width);
 }
+
+.size-reference {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min(100vh, calc(120rem + var(--header-height)));
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoint(mobile) {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
+
+.js-object-animation-wrapper {
+    img {
+        will-change: width, height;
+    }
+}

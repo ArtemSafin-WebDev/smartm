@@ -3,7 +3,7 @@
     z-index: 1;
     padding-top: var(--header-height);
     color: white;
-    --decorative-border-color: #c1daee;
+    // --decorative-border-color: #c1daee;
 }
 
 .object-intro__bg {
@@ -74,9 +74,9 @@
     @include breakpoint(mobile) {
         padding-top: 5rem;
         padding-bottom: 5rem;
+
         min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
-        min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
-        // padding-bottom: calc(5rem + (100vh - var(--vh, 1vh) * 100));
+
         &::before {
             content: '';
             position: absolute;

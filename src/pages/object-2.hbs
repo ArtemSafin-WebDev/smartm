@@ -1,0 +1,524 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="object-intro">
+            <div class="object-intro__bg">
+                <div class="object-intro__bg-animation-wrapper" data-flip-id="1">
+
+
+                    <img src="img/object-intro.jpg" alt="" class="object-intro__bg-image">
+                </div>
+            </div>
+            <div class="container">
+                <div class="inner-container">
+                    <div class="object-intro__content">
+                        <div class="object-intro__top-left-corner"></div>
+                        <div class="object-intro__top-right-corner">
+
+                        </div>
+                        <div class="object-intro__top-right-bar"></div>
+                        <div class="object-intro__top-left-bar"></div>
+                        <div class="object-intro__text-content">
+
+
+                            <div class="object-intro__year">
+                                2022
+                            </div>
+                            <h1 class="object-intro__heading">
+                                Научный центр акушерства
+                            </h1>
+                        </div>
+
+                        <div class="object-intro__status">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-ok">
+                                <use xlink:href="#ok"></use>
+                            </svg>
+                            Объект Введен в экспулатацию
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="object-about">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="object-about__content">
+                        <div class="object-about__top-row">
+                            <h2 class="object-about__heading">
+                                О центре
+                            </h2>
+                            <div class="object-about__text">
+                                Операционные Центра оснащены необходимым оборудованием для выполнения самых сложных
+                                хирургических вмешательств, осуществления репродуктивных технологий.
+                                Высококвалифицированные
+                                врачи с опытом работы в лучших российских и зарубежных клиниках прошли обучение и
+                                стажировку
+                                в ведущих мировых медицинских центрах, и владеют всеми видами высокотехнологичных
+                                хирургических вмешательств.
+                            </div>
+                        </div>
+                        <div class="object-about__bottom-row">
+                            <div class="object-about__top-left-corner"></div>
+                            <div class="object-about__top-right-corner"></div>
+                            <div class="object-about__top-middle-bar"></div>
+                            <div class="object-about__top-left-bar"></div>
+                            <div class="object-about__top-right-bar"></div>
+                            <img src="img/object-about-icon.svg" alt="" class="object-about__icon">
+                            <h3 class="object-about__second-heading">
+                                Ежегодно стационарную и амбулаторную помощь получают более 150 тысяч человек.
+                            </h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="object-info">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="object-info__content">
+                        <ul class="object-info__list">
+                            <li class="object-info__list-item">
+                                <div class="object-info__card">
+                                    <h3 class="object-info__card-title">
+                                        Срок реализации
+                                    </h3>
+                                    <div class="object-info__card-text">
+                                        2021 год
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="object-info__list-item">
+                                <div class="object-info__card">
+                                    <h3 class="object-info__card-title">
+                                        Местоположение
+                                    </h3>
+                                    <div class="object-info__card-text">
+                                        Москва, ул. Академика Опарина, 4
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="object-info__list-item">
+                                <div class="object-info__card">
+                                    <h3 class="object-info__card-title">
+                                        Общая площадь
+                                    </h3>
+                                    <div class="object-info__card-text">
+                                        14 000 м²
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="object-info__list-item">
+                                <div class="object-info__card">
+                                    <h3 class="object-info__card-title">
+                                        Проведенные работы
+                                    </h3>
+                                    <div class="object-info__card-text">
+                                        Строительство, чистое помещение под ключ
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="object-gallery">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="object-gallery__content">
+                        <div class="object-gallery__top-row">
+                            <div class="object-gallery__bottom-left-corner"></div>
+                            <div class="object-gallery__bottom-right-corner"></div>
+                            <div class="object-gallery__bottom-middle-bar"></div>
+                            <div class="object-gallery__bottom-left-bar"></div>
+                            <div class="object-gallery__bottom-right-bar"></div>
+                            <h2 class="object-gallery__heading">
+                                В процессе работы созданы более 100 чертежей и набросков
+                            </h2>
+                            <a href="#gallery-modal" class="object-gallery__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-eye">
+                                    <use xlink:href="#eye"></use>
+                                </svg>
+                                Посмотреть галерею
+                            </a>
+                            <div class="object-gallery__modal js-modal" id="gallery-modal">
+                                <div class="object-gallery__modal-inner">
+                                    <div class="object-gallery__modal-slider js-modal-gallery">
+                                        <div class="object-gallery__modal-slider-main">
+                                            <div class="swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/1.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/2.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image object-gallery__modal-slider-main-card-image--vertical">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/3.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/4.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/5.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="object-gallery__modal-slider-main-card">
+                                                            <img src="img/modal-gallery/6.jpg" alt=""
+                                                                class="object-gallery__modal-slider-main-card-image">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="object-gallery__modal-slider-thumbs">
+                                            <button
+                                                class="object-gallery__modal-slider-arrow object-gallery__modal-slider-arrow--prev">
+                                                <svg width="14" height="14" aria-hidden="true"
+                                                    class="icon-slider-arrow-left">
+                                                    <use xlink:href="#slider-arrow-left"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="object-gallery__modal-slider-thumbs-wrapper">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/1.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/2.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/3.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/4.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/5.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="object-gallery__modal-slider-thumbs-card">
+                                                                <img src="img/modal-gallery/6.jpg" alt=""
+                                                                    class="object-gallery__modal-slider-thumbs-card-image">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button
+                                                class="object-gallery__modal-slider-arrow object-gallery__modal-slider-arrow--next">
+                                                <svg width="14" height="14" aria-hidden="true"
+                                                    class="icon-slider-arrow-right">
+                                                    <use xlink:href="#slider-arrow-right"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-gallery__slider js-gallery-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <div class="object-gallery__slider-card-text">
+                                            В процессе работы созданы более 100 чертежей и набросков. В процессе работы
+                                            созданы более 100 чертежей и набросков
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/1.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--medium">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/2.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--small">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/3.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--large">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <div class="object-gallery__slider-card-text">
+                                            В процессе работы созданы более 100 чертежей и набросков. В процессе работы
+                                            созданы более 100 чертежей и набросков
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/1.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--medium">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/2.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--small">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="object-gallery__slider-card">
+                                        <img src="img/gallery/3.jpg" alt=""
+                                            class="object-gallery__slider-card-image object-gallery__slider-card-image--large">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="pictures">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="pictures__content">
+                        <div class="pictures__top-left-corner"></div>
+                        <div class="pictures__top-right-corner"></div>
+                        <div class="pictures__top-middle-bar"></div>
+                        <div class="pictures__top-left-bar"></div>
+                        <div class="pictures__top-right-bar"></div>
+                        <h2 class="pictures__heading">
+                            Яркие,выразительные рисунки на стенах палат, боксов и коридоров создадут уют и понравятся
+                            любому ребенку
+                        </h2>
+                        <div class="pictures__grid">
+                            <img src="img/pictures/1.jpg" alt="" class="pictures__image">
+                            <div class="pictures__text">
+                                В работе над палатами наши дизайнеры поставили цель – создать комфорт для ребенка, чтобы
+                                переход из уютного домав медицинскую среду был позитивным и не чужым. Такая обстановка
+                                благоприятно влияет на детей: они отвлекаютсяот процедур, быстрее адаптируются к
+                                больничным условиям, легче доверяют медработникам и находят общий язык друг с другом.
+                            </div>
+                            <img src="img/pictures/2.jpg" alt="" class="pictures__image">
+                            <span class="pictures__numbers">
+                                <span class="pictures__numbers-amount">
+                                    1 000 м²
+                                </span>
+                                <span class="pictures__numbers-text">
+                                    занимают иллюстрации по всему центру
+                                </span>
+                            </span>
+                            <img src="img/pictures/3.jpg" alt="" class="pictures__image">
+                            <div class="pictures__text">
+                                В работе над палатами наши дизайнеры поставили цель – создать комфорт для ребенка, чтобы
+                                переход из уютного домав медицинскую среду был позитивным и не чужым.
+                            </div>
+                            <img src="img/pictures/4.jpg" alt="" class="pictures__image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation">
+            <div class="container">
+                <div class="inner-container">
+                    <div class="presentation__content">
+                        <h2 class="presentation__heading">
+                            3D визуализация помогает увидеть финальный интерьер еще до его строительства
+                        </h2>
+                        <ul class="presentation__list">
+                            <li class="presentation__list-item">
+                                <div class="presentation__card">
+                                    <div class="presentation__card-image-container">
+                                        <img src="img/visualization/1.jpg" alt="" class="presentation__card-image">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="presentation__list-item">
+                                <div class="presentation__card">
+                                    <div class="presentation__card-image-container">
+                                        <img src="img/visualization/2.jpg" alt="" class="presentation__card-image">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="presentation__list-item">
+                                <div class="presentation__card">
+                                    <div class="presentation__card-image-container">
+                                        <img src="img/visualization/3.jpg" alt="" class="presentation__card-image">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="object.html" class="presentation__next-case">
+                            <div class="presentation__next-case-container js-object-animation-wrapper">
+                                <div class="presentation__next-case-bg">
+                                    <img src="img/object-intro.jpg" alt="" class="presentation__next-case-bg-image">
+                                </div>
+                                <h2 class="presentation__next-case-heading">
+                                    Следующий кейс
+                                </h2>
+                                <h3 class="presentation__next-case-title">
+                                    Научный центр акушерства
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="callback__bg">
+                <img data-src="img/callback-bg.jpg" alt="" class="callback__bg-image lazyload">
+            </div>
+            <div class="container">
+                <div class="inner-container">
+                    <div class="callback__row">
+                        <div class="callback__left-col">
+                            <h2 class="callback__heading">
+                                Создадим для вас уникальный медицинский комплекс
+                            </h2>
+                            <div class="callback__text">
+                                <p>
+                                    Обсудим детали вашего проекта и ответим на все вопросы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="callback__right-col">
+                            <form action="/" method="POST" class="callback__form" data-need-validation="">
+                                <div class="callback__form-fields">
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="text" name="name" class="callback__form-input" required=""
+                                                placeholder="Имя">
+                                            <span class="callback__form-label-text">
+                                                Имя
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="tel" name="phone" class="callback__form-input js-phone-input"
+                                                required="" placeholder="Телефон" data-parsley-phone="">
+                                            <span class="callback__form-label-text">
+                                                Телефон
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="email" name="email" class="callback__form-input" required=""
+                                                placeholder="Почта">
+                                            <span class="callback__form-label-text">
+                                                Почта
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-label">
+
+                                            <input type="text" name="comment" class="callback__form-input" required=""
+                                                placeholder="Комментарий">
+                                            <span class="callback__form-label-text">
+                                                Комментарий
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="callback__form-field">
+                                        <label class="callback__form-file js-file-upload">
+                                            <input type="file" class="callback__form-file-input">
+                                            <span class="callback__form-file-text js-file-upload-text">
+                                                Прикрепить файл
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-file">
+                                                <use xlink:href="#file"></use>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="callback__form-submit" type="submit">
+                                    Отправить
+                                </button>
+                                <div class="callback__form-text">
+                                    Нажимая на кнопку, вы даете <a href="#">согласие</a> на обработку персональных
+                                    данных
+                                    и соглашаетесь
+                                    с политикой конфиденциальности.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="callback__success">
+                <div class="callback__success-bg">
+                    <img data-src="img/callback-bg.jpg" alt="" class="callback__success-bg-image lazyload">
+                </div>
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="callback__success-row">
+                            <h3 class="callback__success-heading">
+                                Ваша заявка<br> успешно<br> отправлена
+                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                    <use xlink:href="#checkmark"></use>
+                                </svg>
+                            </h3>
+                            <div class="callback__success-text">
+                                <p>
+                                    Спасибо за обращение! Мы уже обрабатываем ваше обращение, наш менеджер свяжется с
+                                    вами в течении дня
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
