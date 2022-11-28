@@ -1,0 +1,73 @@
+.about-quote {
+    background-color: var(--bg-color-light);
+
+    .light-theme & {
+        background-color: var(--bg-color);
+    }
+}
+
+.about-quote__content {
+    position: relative;
+    padding: 0 var(--side-padding);
+    padding-top: 5.5rem;
+    padding-bottom: 19rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 2.7rem;
+        padding-bottom: 5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 1px;
+        background-color: var(--decorative-border-color);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 1px;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.about-quote__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.6rem;
+    line-height: 6.1rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 2.7rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        margin-bottom: 6rem;
+        width: 11.6rem;
+        height: 9.5rem;
+        background-image: url('../img/quotes.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpoint(mobile) {
+            width: 7.6rem;
+            height: 6.3rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+}
