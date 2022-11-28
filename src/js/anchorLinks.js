@@ -9,6 +9,7 @@ export default function anchorLinks() {
     const offset = 0;
     const DURATION = 1.4;
     const scrollByHash = (hash, context = document) => {
+        if (!hash) return;
         const elementToScroll = context.querySelector(hash);
         if (elementToScroll && !elementToScroll.matches('.js-modal')) {
             if (window.menuOpen && typeof window.closeMenu === 'function') {
