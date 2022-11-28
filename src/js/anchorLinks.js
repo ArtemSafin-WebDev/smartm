@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 
 gsap.registerPlugin(ScrollToPlugin);
 

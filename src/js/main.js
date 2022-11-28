@@ -1,7 +1,6 @@
 import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
-
 import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
@@ -20,6 +19,7 @@ import gallery from './gallery';
 import presentationCards from './presentationCards';
 import historySlider from './historySlider';
 import anchorLinks from './anchorLinks';
+import forms from './forms';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     presentationCards();
     historySlider();
     anchorLinks();
+    forms();
 });
 
 document.addEventListener('lazyloaded', () => {

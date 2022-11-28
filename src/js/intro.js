@@ -1,6 +1,5 @@
 import { Swiper, Navigation, EffectCreative } from 'swiper';
 import { PAGE_ENTER, PAGE_LEAVE } from './constants';
-import { IS_MOBILE } from './utils';
 
 Swiper.use([Navigation, EffectCreative]);
 
