@@ -5,10 +5,10 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
     const pageHeader = document.querySelector('.page-header');
-    const offset = pageHeader ? pageHeader.offsetHeight : 80;
+    const offset = 0;
     const DURATION = 1.4;
-    const scrollByHash = hash => {
-        const elementToScroll = document.querySelector(hash);
+    const scrollByHash = (hash, context = document) => {
+        const elementToScroll = context.querySelector(hash);
         if (elementToScroll && !elementToScroll.matches('.js-modal')) {
             if (window.menuOpen && typeof window.closeMenu === 'function') {
                 window.closeMenu();
@@ -51,4 +51,14 @@ export default function anchorLinks() {
     if (window.location.hash) {
         scrollByHash(window.location.hash);
     }
+
+    document.addEventListener(PAGE_ENTER, event => {
+        const container = event.detail.container;
+
+        const hash = window.location.hash;
+
+        console.log('Has hash', hash);
+
+        scrollByHash(hash, container);
+    });
 }

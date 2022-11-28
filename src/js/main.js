@@ -19,6 +19,7 @@ import modalGallery from './modalGallery';
 import gallery from './gallery';
 import presentationCards from './presentationCards';
 import historySlider from './historySlider';
+import anchorLinks from './anchorLinks';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gallery();
     presentationCards();
     historySlider();
+    anchorLinks();
 });
 
 document.addEventListener('lazyloaded', () => {
