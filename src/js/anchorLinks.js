@@ -5,7 +5,6 @@ import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
-    const pageHeader = document.querySelector('.page-header');
     const offset = 0;
     const DURATION = 1.4;
     const scrollByHash = (hash, context = document) => {

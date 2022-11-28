@@ -3,6 +3,7 @@ import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 import { objectIn, objectOut, standardFadeIn, standardFadeOut } from './transitions';
 
 export default function pageTransitions() {
+    if (document.body.classList.contains('admin-bar')) return;
     barba.init({
         transitions: [
             {
