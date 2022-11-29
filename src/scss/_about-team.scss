@@ -148,12 +148,6 @@
             max-width: 100%;
             margin-top: 21rem;
             margin-left: 6.4rem;
-            .about-team__card-image-container {
-                &::before {
-                    content: '';
-                    padding-bottom: 110%;
-                }
-            }
         }
 
         .about-team__list-item:nth-child(4n + 3) {
@@ -163,24 +157,12 @@
             width: 52rem;
             max-width: 100%;
             margin-top: -18.5rem;
-            .about-team__card-image-container {
-                &::before {
-                    content: '';
-                    padding-bottom: 120%;
-                }
-            }
         }
 
         .about-team__list-item:nth-child(4n + 4) {
             width: 63rem;
             margin-top: 16rem;
             grid-column: 7 / -1;
-
-            .about-team__card-image-container {
-                &::before {
-                    padding-bottom: 75%;
-                }
-            }
         }
     }
 
@@ -208,13 +190,6 @@
             &:last-child {
                 margin-bottom: 0;
             }
-
-            .about-team__card-image-container {
-                &::before {
-                    content: '';
-                    padding-bottom: 110%;
-                }
-            }
         }
 
         .about-team__list-item:nth-child(4n + 3) {
@@ -225,13 +200,6 @@
             &:last-child {
                 margin-bottom: 0;
             }
-
-            .about-team__card-image-container {
-                &::before {
-                    content: '';
-                    padding-bottom: 120%;
-                }
-            }
         }
 
         .about-team__list-item:nth-child(4n + 4) {
@@ -240,11 +208,6 @@
             margin-bottom: 3rem;
             margin-right: 1rem;
 
-            .about-team__card-image-container {
-                &::before {
-                    padding-bottom: 75%;
-                }
-            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -264,19 +227,11 @@
     @include breakpoint(mobile) {
         margin-bottom: 1.5rem;
     }
-    &::before {
-        content: '';
-        display: block;
-        padding-bottom: 65%;
-    }
 }
 
 .about-team__card-image {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
