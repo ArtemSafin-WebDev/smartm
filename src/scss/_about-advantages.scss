@@ -20,6 +20,17 @@
             background-color: var(--bg-color);
         }
     }
+
+    &--rooms {
+        &::before {
+            background-color: var(--bg-color);
+        }
+        .light-theme & {
+            &::before {
+                background-color: #ffffff;
+            }
+        }
+    }
 }
 
 .about-advantages__content {
@@ -68,6 +79,13 @@
             bottom: 0;
         }
     }
+
+    .about-advantages--rooms & {
+        &::before,
+        &::after {
+            bottom: 0;
+        }
+    }
 }
 
 .about-advantages__heading {
@@ -86,6 +104,32 @@
         font-size: 2.6rem;
         line-height: 2.7rem;
         margin-bottom: 2rem;
+    }
+}
+
+.about-advantages__text-content {
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 6;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.about-advantages__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin-top: 5.4rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+        margin-top: 2.5rem;
     }
 }
 

@@ -1,0 +1,365 @@
+.rooms-intro {
+    background-image: url('../img/rooms-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: var(--header-height);
+
+    .light-theme & {
+        background-image: url('../img/rooms-bg-light.jpg');
+    }
+
+    @include breakpoint(mobile) {
+        background-image: url('../img/rooms-bg-mobile.jpg');
+
+        .light-theme & {
+            background-image: url('../img/rooms-bg-light-mobile.jpg');
+        }
+    }
+}
+
+.rooms-intro__top {
+    position: relative;
+    padding: 0 var(--side-padding);
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 1.3rem;
+        bottom: 1.3rem;
+        left: 0;
+        background-color: var(--decorative-border-color);
+        pointer-events: none;
+
+        @include breakpoint(mobile) {
+            top: 0;
+            bottom: 0;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 1.3rem;
+        bottom: 1.3rem;
+        right: 0;
+        background-color: var(--decorative-border-color);
+        pointer-events: none;
+
+        @include breakpoint(mobile) {
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.rooms-intro__second-top-left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 1.3rem;
+        position: absolute;
+        background-color: var(--decorative-border-color);
+    }
+
+    &::after {
+        content: '';
+        width: 0.6rem;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        width: 0.6rem;
+        left: 0;
+        background-color: var(--decorative-border-color);
+    }
+}
+.rooms-intro__second-top-right-corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 1.3rem;
+        position: absolute;
+        background-color: var(--decorative-border-color);
+        right: 0;
+    }
+
+    &::after {
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.6rem;
+
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-intro__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.5rem;
+    line-height: 8.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4.9rem;
+        line-height: 4.3rem;
+    }
+}
+
+.rooms-intro__top-left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.3rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 0.6rem;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-intro__top-right-corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.3rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+        margin-left: -0.5px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 0.6rem;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-intro__top-right-bar {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 1.3rem;
+    width: 100vw;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.rooms-intro__top-left-bar {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: 1.3rem;
+    width: 100vw;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.rooms-intro__top-middle-bar {
+    position: absolute;
+    left: 1.3rem;
+    right: 1.3rem;
+    height: 1px;
+    top: 0;
+    background-color: var(--decorative-border-color);
+    @include breakpoint(mobile) {
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+}
+
+.rooms-intro__bottom {
+    padding: 0 var(--side-padding);
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
+    position: relative;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 4.4rem;
+        align-items: flex-start;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.3rem;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 1.3rem;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.5rem;
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+}
+
+.rooms-intro__bottom-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 7;
+    }
+
+    .light-theme & {
+        color: #68a4c6;
+    }
+}
+
+.rooms-intro__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.7rem;
+    line-height: 3.3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+    }
+    @include breakpointMF(small-tablet) {
+        grid-column: 7 / -1;
+    }
+}
+
+.rooms-intro__second-middle-bar {
+    position: absolute;
+    left: 1.3rem;
+    height: 1px;
+    right: 1.3rem;
+    top: 0;
+    pointer-events: none;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+}

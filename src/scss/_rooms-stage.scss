@@ -1,0 +1,392 @@
+.rooms-stage {
+    background-color: var(--bg-color-light);
+    touch-action: pan-y;
+    flex-shrink: 0;
+    .light-theme & {
+        background: white;
+    }
+}
+.rooms-stage__slider {
+    position: relative;
+}
+
+.rooms-stage__counter {
+    position: absolute;
+    left: var(--side-padding);
+    top: 4.7rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--filled-color);
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        width: 3.4rem;
+        height: 3.4rem;
+        top: 1.9rem;
+        left: auto;
+        right: var(--side-padding);
+    }
+
+    --filled-color: white;
+    --unfilled-color: #476a7e;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: rotate(-90deg);
+        circle {
+            &:nth-child(1) {
+                stroke: var(--unfilled-color);
+            }
+            &:nth-child(2) {
+                stroke-dashoffset: calc(500px - 500px * var(--slider-progress, 0));
+                stroke: var(--filled-color);
+            }
+        }
+    }
+
+    .light-theme & {
+        --filled-color: #68a4c6;
+        --unfilled-color: #c1daee;
+    }
+}
+
+.rooms-stage__slide {
+}
+
+.rooms-stage__content {
+    @include breakpoint(mobile) {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            background-color: var(--decorative-border-color);
+        }
+    }
+}
+
+.rooms-stage__slide {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    user-select: none;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.rooms-stage__slide-left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        position: relative;
+    }
+}
+
+.rooms-stage__slide-right-col {
+    @include breakpoint(mobile) {
+        order: -1;
+    }
+}
+
+.rooms-stage__slide-title-wrapper {
+    position: relative;
+
+    &::before {
+        content: '';
+        top: 1.3rem;
+        bottom: 1.3rem;
+        width: 1px;
+        left: 0;
+        position: absolute;
+        background-color: var(--decorative-border-color);
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.rooms-stage__slide-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 6.1rem;
+    padding-left: var(--side-padding);
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    padding-right: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 2.7rem;
+        padding-right: 7rem;
+    }
+}
+
+.rooms-stage__slide-empty-space {
+    flex-grow: 1;
+    padding: 0 var(--side-padding);
+    position: relative;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 1.3rem;
+        left: 0;
+        width: 1px;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-stage__top-left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
+        left: 50%;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-stage__slide-text-wrapper {
+    position: relative;
+
+    &::before {
+        content: '';
+        top: 1.3rem;
+        bottom: 0;
+        width: 1px;
+        position: absolute;
+        background-color: var(--decorative-border-color);
+        left: 0;
+
+        @include breakpoint(mobile) {
+            width: 100vw;
+            top: 0;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 1px;
+        }
+    }
+}
+
+.rooms-stage__slide-image-wrapper {
+    margin-right: calc((100vw - 100% * 2 - var(--sb-width, 0)) / 2 * -1);
+    position: relative;
+    background-color: var(--bg-color);
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    .light-theme & {
+        background-color: #eef6fe;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 90%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 65%;
+        }
+    }
+}
+
+.rooms-stage__slide-image-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease 0.4s, visibility 0s linear 0.8s;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+        z-index: 10;
+    }
+}
+
+.rooms-stage__slide-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.rooms-stage__slide-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    padding-left: var(--side-padding);
+    padding-top: 6.2rem;
+    padding-bottom: 6.2rem;
+    padding-right: 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 2.2rem var(--side-padding);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.rooms-stage__slide-top-bar {
+    position: absolute;
+    left: 1.3rem;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.rooms-stage__slide-left-bar {
+    position: absolute;
+    right: 100%;
+    margin-right: 1.3rem;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    top: 0;
+    width: 100vw;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.rooms-stage__slide-text-layers-wrapper,
+.rooms-stage__slide-title-layers-wrapper {
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.rooms-stage__slide-title-layers,
+.rooms-stage__slide-text-layers {
+    position: relative;
+}
+
+.rooms-stage__slide-title-layer,
+.rooms-stage__slide-text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &.active {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.rooms__pin-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.rooms__pin-wrapper-inner {
+    &.pinned {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -20,6 +20,7 @@ import presentationCards from './presentationCards';
 import historySlider from './historySlider';
 import anchorLinks from './anchorLinks';
 import forms from './forms';
+import roomsStages from './roomsStages';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     historySlider();
     anchorLinks();
     forms();
+    roomsStages();
 });
 
 document.addEventListener('lazyloaded', () => {

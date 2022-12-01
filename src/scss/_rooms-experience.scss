@@ -1,0 +1,123 @@
+.rooms-experience {
+    .light-theme & {
+        background: white;
+    }
+}
+
+.rooms-experience__content {
+    padding: 0 var(--side-padding);
+    position: relative;
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 1px;
+        top: 0;
+        bottom: 0;
+        background-color: var(--decorative-border-color);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1px;
+        top: 0;
+        bottom: 1.3rem;
+        background-color: var(--decorative-border-color);
+        z-index: 1;
+
+        @include breakpoint(mobile) {
+            bottom: 0;
+        }
+    }
+}
+
+.rooms-experience__image-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+        padding-bottom: 90%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+            padding-bottom: 65%;
+        }
+    }
+}
+
+.rooms-experience__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rooms-experience__image-wrapper {
+    // margin-left: calc(-1 * (100vw - 100% * 2 - var(--sb-width, 0) - var(--side-padding) * 2 - var(--content-padding) * 2) / 2);
+    margin-left: calc((100vw - 100% * 2 - var(--sb-width, 0)) / 2 * -1);
+    position: relative;
+    z-index: 30;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}
+.rooms-experience__text-content {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.rooms-experience__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 6.2rem;
+    margin-bottom: 8.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 2.7rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.rooms-experience__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+}

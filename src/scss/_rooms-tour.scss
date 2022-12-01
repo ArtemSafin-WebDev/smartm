@@ -1,0 +1,202 @@
+.rooms-tour {
+    .light-theme & {
+        background-color: #fff;
+    }
+}
+
+.rooms-tour__content {
+    position: relative;
+    &::before {
+        content: '';
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        width: 1px;
+        pointer-events: none;
+        background-color: var(--decorative-border-color);
+    }
+    &::after {
+        content: '';
+        right: 0;
+        top: 1.3rem;
+        bottom: 0;
+        position: absolute;
+        width: 1px;
+        pointer-events: none;
+        background-color: var(--decorative-border-color);
+
+        @include breakpoint(mobile) {
+            top: 0;
+        }
+    }
+}
+.rooms-tour__top {
+    padding: 4rem var(--side-padding);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+    svg {
+        flex-shrink: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--text-color);
+        flex-shrink: 0;
+        @include breakpoint(mobile) {
+            width: 1.9rem;
+            height: 1.9rem;
+        }
+    }
+
+    .light-theme & {
+        svg {
+            fill: #68a4c6;
+        }
+    }
+}
+
+.rooms-tour__top-middle-bar {
+    position: absolute;
+    width: 100vw;
+    right: 1.3rem;
+    height: 1px;
+    position: absolute;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        right: 0;
+    }
+}
+
+.rooms-tour__heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    .light-theme & {
+        color: #68a4c6;
+    }
+}
+
+.rooms-tour__iframe-wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--decorative-border-color);
+    z-index: 10;
+    &::before {
+        content: '';
+        display: block;
+
+        height: min(80vh, 120rem);
+    }
+
+    iframe,
+    video,
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.rooms-tour__top-left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
+        left: 50%;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-tour__top-right-corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.2rem;
+        height: 1px;
+        background-color: var(--decorative-border-color);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 1.2rem;
+        right: 0;
+        background-color: var(--decorative-border-color);
+    }
+}
+
+.rooms-tour__top-right-bar {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+    width: 100vw;
+    margin-left: 1.3rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}
