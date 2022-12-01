@@ -1,0 +1,75 @@
+.cookies {
+    position: fixed;
+    z-index: 90;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #004571;
+    color: #c1daee;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    .light-theme & {
+        background-color: #fff;
+        color: #1c2128;
+    }
+
+    &.shown {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+.cookies__row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+
+    padding: 4.4rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem 0;
+        // flex-direction: column;
+    }
+}
+
+.cookies__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.cookies__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.7rem;
+    line-height: 2.8rem;
+    color: #ffffff;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+    &:link,
+    &:visited {
+        color: #ffffff;
+    }
+
+    .light-theme & {
+        color: #004571;
+        &:link,
+        &:visited {
+            color: #004571;
+        }
+    }
+}

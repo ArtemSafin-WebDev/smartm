@@ -21,6 +21,7 @@ import historySlider from './historySlider';
 import anchorLinks from './anchorLinks';
 import forms from './forms';
 import roomsStages from './roomsStages';
+import cookies from './cookies';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     forms();
     roomsStages();
+    cookies();
 });
 
 document.addEventListener('lazyloaded', () => {
