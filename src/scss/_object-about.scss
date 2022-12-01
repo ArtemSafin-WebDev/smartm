@@ -203,7 +203,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 6rem;
-    line-height: 6.2rem;
+    line-height: 1.1;
 
     @include breakpointMF(small-tablet) {
         grid-column: 3 / 12;
@@ -214,7 +214,6 @@
         font-style: normal;
         font-weight: 400;
         font-size: 2.6rem;
-        line-height: 2.7rem;
     }
 }
 

@@ -1,6 +1,10 @@
 .rooms {
     background: linear-gradient(180deg, rgba(30, 136, 202, 0.22) 0%, rgba(30, 136, 202, 0) 100%);
 
+    .rooms + & {
+        background: none !important;
+    }
+
     .light-theme & {
         background: linear-gradient(180deg, rgba(30, 136, 202, 0.06) 0%, rgba(30, 136, 202, 0) 100%);
     }
@@ -39,6 +43,13 @@
 
         @include breakpoint(mobile) {
             bottom: 0;
+        }
+    }
+
+    .rooms + .rooms & {
+        &::before,
+        &::after {
+            top: -1.3rem;
         }
     }
 
@@ -119,7 +130,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
         & > svg {
             display: none;
         }
@@ -167,13 +178,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 6rem;
-    line-height: 5.6rem;
+    line-height: 1.1;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
         font-size: 2.6rem;
-        line-height: 1;
+
         margin-bottom: 2rem;
     }
 }

@@ -211,6 +211,7 @@
                     display: inline-flex;
                     gap: 0.4rem;
                     align-items: center;
+                    transition: color 0.2s;
                     &:link,
                     &:visited {
                         color: var(--grey-text);

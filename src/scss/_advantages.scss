@@ -1,4 +1,7 @@
 .advantages {
+    .light-theme & {
+        background-color: #fff;
+    }
 }
 
 .advantages__content {
@@ -102,31 +105,69 @@
 .advantages__left-cross {
     position: absolute;
     left: 0;
-    pointer-events: none;
     top: 0;
-
+    pointer-events: none;
+    margin-left: 0.5px;
+    margin-top: 0.5px;
     @include breakpoint(mobile) {
         display: none;
     }
+
     &::before {
         content: '';
-        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         width: 1.2rem;
         height: 1px;
         background-color: var(--decorative-border-color);
+        top: 0;
         position: absolute;
+        margin-top: -0.5px;
     }
+
     &::after {
         content: '';
+        position: absolute;
         top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
         left: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
+        background-color: var(--decorative-border-color);
+    }
+}
+.advantages__right-cross {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    margin-right: 0.5px;
+    margin-top: 0.5px;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
         width: 1.2rem;
         height: 1px;
         background-color: var(--decorative-border-color);
+        top: 0;
         position: absolute;
+        margin-top: -0.5px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 1px;
+        height: 1.2rem;
+        left: 50%;
+        background-color: var(--decorative-border-color);
     }
 }
 
@@ -152,6 +193,26 @@
             background-color: var(--decorative-border-color);
             transform: translateX(-50%);
         }
+    }
+}
+
+.advantages__middle-bar {
+    position: absolute;
+    left: 1.3rem;
+    right: 1.3rem;
+    top: 0;
+    height: 1px;
+    background-color: var(--decorative-border-color);
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        top: 0;
+        height: 1px;
+        right: auto;
+        background-color: var(--decorative-border-color);
+        transform: translateX(-50%);
     }
 }
 

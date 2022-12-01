@@ -239,14 +239,14 @@
     font-style: normal;
     font-weight: 400;
     font-size: 6.6rem;
-    line-height: 6.1rem;
+    line-height: 1.1;
     margin-bottom: 9rem;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
         font-size: 2.8rem;
-        line-height: 2.6rem;
+
         margin-bottom: 2.5rem;
     }
 }
@@ -342,13 +342,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 2.7rem;
-    line-height: 2.8rem;
+    line-height: 1.2;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.7rem;
-        line-height: 1.8rem;
     }
 }
 

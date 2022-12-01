@@ -68,14 +68,14 @@
     font-style: normal;
     font-weight: 400;
     font-size: 6rem;
-    line-height: 5.6rem;
+    line-height: 1.1;
     margin-bottom: 4.4rem;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
         font-size: 2.6rem;
-        line-height: 1;
+
         margin-bottom: 1.2rem;
     }
 }
@@ -255,13 +255,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 2.7rem;
-    line-height: 2.8rem;
+    line-height: 1.1;
     transition: color 0.2s;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.7rem;
-        line-height: 1.8rem;
     }
 }
