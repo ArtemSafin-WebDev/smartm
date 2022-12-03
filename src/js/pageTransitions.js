@@ -1,6 +1,9 @@
 import barba from '@barba/core';
+import barbaPrefetch from '@barba/prefetch';
 import { PAGE_ENTER, PAGE_LEAVE } from './constants';
 import { objectIn, objectOut, standardFadeIn, standardFadeOut } from './transitions';
+
+barba.use(barbaPrefetch);
 
 export default function pageTransitions() {
     if (document.body.classList.contains('admin-bar')) return;

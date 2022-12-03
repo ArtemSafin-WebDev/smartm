@@ -33,11 +33,6 @@ export const objectIn = data => {
         autoAlpha: 0,
         duration: 0.5,
         delay: 2
-        // onComplete: () => {
-        //     gsap.set(data.next.container, {
-        //         clearProps: 'all'
-        //     });
-        // }
     });
 };
 
