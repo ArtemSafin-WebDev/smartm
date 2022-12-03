@@ -134,19 +134,14 @@
 .object-intro__heading {
     font-style: normal;
     font-weight: 400;
-    font-size: 11.5rem;
-    line-height: 10.1rem;
-
-    @media (max-width: 1679px) {
-        font-size: 8rem;
-        line-height: 1.2;
-    }
+    font-size: 6.2rem;
+    line-height: 1.2;
 
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
-        font-size: 4.9rem;
-        line-height: 4.3rem;
+        font-size: 4rem;
+        line-height: 1.2;
     }
 }
 
